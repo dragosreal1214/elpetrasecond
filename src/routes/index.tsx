@@ -63,20 +63,20 @@ function HomePage() {
           <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
         </svg>
         <div className="bg-gold py-12 px-6">
-          <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8 md:gap-16">
+          <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-16">
             {[
               { value: "7.0", label: "Rating Wolt" },
               { value: "#1", label: "Shawarma Iași" },
               { value: "2026", label: "Deschis din" },
             ].map((s) => (
-              <div key={s.label} className="badge-stat shadow-lg">
-                <span
-                  className="font-display text-gold leading-none"
-                  style={{ fontSize: "2.4rem" }}
-                >
+              <div
+                key={s.label}
+                className="w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] rounded-full bg-background flex flex-col items-center justify-center text-center p-3 sm:p-4 border-[3px] border-background shadow-lg"
+              >
+                <span className="font-display text-gold leading-none text-[1.9rem] sm:text-[2.4rem]">
                   {s.value}
                 </span>
-                <span className="text-white/70 text-xs tracking-widest uppercase font-sans mt-1 font-semibold">
+                <span className="text-white/70 text-[0.5rem] sm:text-xs tracking-widest uppercase font-sans mt-1 font-semibold">
                   {s.label}
                 </span>
               </div>
@@ -177,11 +177,11 @@ function HomePage() {
               ))}
             </div>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
-              <Link to="/meniu" className="btn-gold">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Link to="/meniu" className="btn-gold w-full sm:w-auto justify-center">
                 Vezi meniul complet
               </Link>
-              <a href={WOLT_URL} target="_blank" rel="noopener noreferrer" className="btn-gold-outline">
+              <a href={WOLT_URL} target="_blank" rel="noopener noreferrer" className="btn-gold-outline w-full sm:w-auto justify-center">
                 Comandă pe Wolt
               </a>
             </div>

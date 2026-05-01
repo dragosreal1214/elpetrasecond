@@ -109,7 +109,7 @@ export default function Navbar() {
             href={WOLT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold mt-2 text-center"
+            className="btn-gold mt-2 w-full justify-center"
             onClick={() => setOpen(false)}
           >
             Comandă pe Wolt

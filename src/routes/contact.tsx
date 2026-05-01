@@ -115,7 +115,7 @@ function ContactPage() {
           <form
             action="https://formspree.io/f/your-form-id"
             method="POST"
-            className="space-y-5 bg-surface border border-white/6 rounded-lg p-8"
+            className="space-y-5 bg-surface border border-white/6 rounded-lg p-5 sm:p-8"
           >
             <Field label="Nume">
               <input
