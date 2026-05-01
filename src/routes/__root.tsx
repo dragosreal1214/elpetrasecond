@@ -1,9 +1,7 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WoltFloat from "@/components/WoltFloat";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -25,45 +23,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "El Petra Shawarma — Gustul Orientului, în inima Iașului" },
-      {
-        name: "description",
-        content:
-          "Shawarma arabescă autentică în Iași — rețete iordaniene tradiționale, carne marinată lent. Comandă pe Wolt sau vino în centrul Iașului.",
-      },
-      { name: "author", content: "El Petra Shawarma" },
-      { property: "og:title", content: "El Petra Shawarma — Iași" },
-      {
-        property: "og:description",
-        content: "Shawarma arabescă autentică, rețete iordaniene, în centrul Iașului.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "stylesheet", href: appCss }],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ro">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (

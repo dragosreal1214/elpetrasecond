@@ -15,16 +15,6 @@ import ambient1 from "@/assets/ambient-1.jpg";
 import ambientPetra from "@/assets/ambient-petra.jpg";
 
 export const Route = createFileRoute("/galerie")({
-  head: () => ({
-    meta: [
-      { title: "Galerie — El Petra Shawarma Iași" },
-      {
-        name: "description",
-        content: "Galerie foto El Petra: preparate autentice, interior cu murale Petra, ambianță orientală în centrul Iașului.",
-      },
-      { property: "og:title", content: "Galerie El Petra Shawarma" },
-    ],
-  }),
   component: GalleryPage,
 });
 
